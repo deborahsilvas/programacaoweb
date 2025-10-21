@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Anamnese Digital - TecnoVida (Apenas HTML)</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+            color: #333;
+        }
+        form {
+            background-color: #ffffff;
+            padding: 30px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        fieldset {
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-bottom: 25px;
+            padding: 15px 20px;
+        }
+        legend {
+            font-weight: 600;
+            font-size: 1.1em;
+            color: #1a1a1a;
+            padding: 0 8px;
+        }
+        div {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 500;
+        }
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        input[type="date"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            font-size: 14px;
+        }
+        input[type="submit"] {
+            background-color: #333; /* Preto simples */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            width: 100%;
+        }
+        input[type="submit"]:hover {
+            background-color: #555;
+        }
+        .radio-group label, .checkbox-group label {
+            font-weight: normal;
+            display: inline-block;
+            margin-right: 20px;
+        }
+        .radio-group input, .checkbox-group input {
+            width: auto;
+            margin-right: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <form action="#" method="post"> 
+        <h2>Formulário de Anamnese Digital - TecnoVida</h2>
+
+        <fieldset>
+            <legend>1. Dados Pessoais</legend>
+
+            <div>
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+
+            <div>
+                <label for="nascimento">Data de Nascimento:</label>
+                <input type="date" id="nascimento" name="nascimento" required max="2020-12-31">
+            </div>
+
+            <div>
+                <label for="genero">Gênero:</label>
+                <input type="text" id="genero" name="genero" placeholder="Ex: Masculino, Feminino, Outro" required>
+            </div>
+
+            <div>
+                <label for="cpf">CPF (Apenas dígitos):</label>
+                <input type="number" id="cpf" name="cpf" placeholder="Ex: 12345678900" required>
+            </div>
+
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Histórico de Saúde</legend>
+
+            <div>
+                <label>Possui alguma doença crônica?</label>
+                <div class="radio-group">
+                    <input type="radio" id="doenca_cronica_sim" name="doenca_cronica" value="Sim" required>
+                    <label for="doenca_cronica_sim">Sim</label>
+
+                    <input type="radio" id="doenca_cronica_nao" name="doenca_cronica" value="Não">
+                    <label for="doenca_cronica_nao">Não</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="medicamentos">Quais medicamentos você utiliza regularmente?</label>
+                <textarea id="medicamentos" name="medicamentos" rows="3" placeholder="Liste os nomes dos medicamentos e as dosagens. Se não usar nenhum, digite: NENHUM."></textarea>
+            </div>
+
+            <div>
+                <label>Você fuma?</label>
+                <div class="checkbox-group">
+                    <input type="checkbox" id="fuma" name="fuma" value="Sim">
+                    <label for="fuma">Sim (Marque se fumar)</label>
+                </div>
+            </div>
+
+            <div>
+                <label for="altura">Altura (em cm):</label>
+                <input type="number" id="altura" name="altura" min="50" max="300" step="0.1" placeholder="Ex: 175.5">
+            </div>
+
+            <div>
+                <label for="peso">Peso (em kg):</label>
+                <input type="number" id="peso" name="peso" min="20" max="500" step="0.1" placeholder="Ex: 72.3">
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Detalhes da Consulta</legend>
+
+            <div>
+                <label for="motivo_consulta">Qual é o principal motivo da sua consulta?</label>
+                <input type="text" id="motivo_consulta" name="motivo_consulta" placeholder="Descreva brevemente o principal sintoma ou preocupação." required>
+            </div>
+
+            <div>
+                <label for="frequencia_exercicio">Com que frequência você pratica exercícios físicos?</label>
+                <select id="frequencia_exercicio" name="frequencia_exercicio" required>
+                    <option value="">-- Selecione uma opção --</option>
+                    <option value="Diariamente">Diariamente</option>
+                    <option value="Semanalmente">Semanalmente</option>
+                    <option value="Raramente">Raramente</option>
+                    <option value="Nunca">Nunca</option>
+                </select>
+            </div>
+
+            <div>
+                <label for="ultima_consulta">Data da Última Consulta (aproximada):</label>
+                <input type="date" id="ultima_consulta" name="ultima_consulta">
+            </div>
+
+            <div>
+                <label>Prefere ser contatado por:</label>
+                <div class="radio-group">
+                    <input type="radio" id="contato_telefone" name="preferencia_contato" value="Telefone" required>
+                    <label for="contato_telefone">Telefone</label>
+
+                    <input type="radio" id="contato_email" name="preferencia_contato" value="E-mail">
+                    <label for="contato_email">E-mail</label>
+                </div>
+            </div>
+
+            <div>
+                <input type="submit" value="Enviar Formulário de Anamnese">
+            </div>
+        </fieldset>
+
+    </form>
+
+</body>
+</html>
