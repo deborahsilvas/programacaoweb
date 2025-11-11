@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Imagem com fundo preto leve</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      font-family: Arial, sans-serif;
+      position: relative;
+      overflow: hidden;
+    }
+
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url("ilha.png") no-repeat center center/cover;
+      filter: brightness(50%); 
+      z-index: -2;
+    }
+
+    body::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.3); 
+      z-index: -1;
+    }
+
+    .overlay {
+      color: red;
+      font-size: 28px;
+      line-height: 1.6;
+      text-align: justify;
+      max-width: 80%;
+      margin: 0 auto;
+      padding: 40px;
+      background-color: rgba(0, 0, 0, 0.6); 
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      top: 30%;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="overlay">
+    <p>
+      Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+      Placeat cupiditate facere cumque ratione odio doloremque deserunt dignissimos 
+      sunt eum alias voluptatum repellendus, quis, dolores perspiciatis enim 
+      vero nam quisquam possimus.
+    </p>
+  </div>
+</body>
+</html>
+
