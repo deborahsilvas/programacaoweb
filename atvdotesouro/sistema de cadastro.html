@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário para cadastro de Voluntários</title>
+</head>
+<body>
+
+  <h1>Ficha de cadastro</h1>
+
+  <form action="#" method="post">
+    
+    <label>Nome completo:</label><br>
+    <input type="text" name="nome" required><br><br>
+
+    <label>E-mail:</label><br>
+    <input type="email" name="email" required><br><br>
+
+    <label>Telefone:</label><br>
+    <input type="tel" name="telefone" required><br><br>
+
+    <label>Idade:</label><br>
+    <input type="number" name="idade" min="18" max="80" required><br><br>
+
+    <label>Já participou de expedições arqueológicas?</label><br>
+    <select name="experiencia">
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select><br><br>
+
+    <label>Você possui algum tipo de deficiência?</label><br>
+    <select name="deficiencia">
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select><br><br>
+
+    <label>Por que deseja ser voluntário?</label><br>
+    <textarea name="motivo" rows="3" cols="30" required></textarea><br><br>
+
+    <label>Cor preferida para a camiseta:</label><br>
+    <input type="color" name="cor_camiseta"><br><br>
+
+    <label>Você está disponível para viagens?</label><br>
+    <input type="radio" name="disponivel_viagem" value="sim" required> Sim<br>
+    <input type="radio" name="disponivel_viagem" value="nao"> Não<br><br>
+
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+
+  </form>
+  <a href="exemplos.html">Voltar para a página incial</a>
+
+</body>
+</html>
