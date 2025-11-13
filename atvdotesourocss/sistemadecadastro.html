@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário para Cadastro de Voluntários</title>
+  <style>
+  
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #3a2b0b, #000);
+      color: #f5e9c4;
+      padding: 40px;
+      margin: 0;
+      animation: fadeIn 1.2s ease-in;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h1 {
+      text-align: center;
+      color: #ffd966;
+      text-shadow: 0 0 15px rgba(255, 204, 102, 0.7);
+      margin-bottom: 25px;
+      font-size: 2em;
+      animation: glow 3s ease-in-out infinite alternate;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px #b18b46, 0 0 20px #ffcc33; }
+      to { text-shadow: 0 0 25px #ffe680, 0 0 40px #ffcc00; }
+    }
+
+    form {
+      background-color: rgba(0, 0, 0, 0.5);
+      border: 1px solid #b18b46;
+      border-radius: 12px;
+      padding: 25px 35px;
+      max-width: 600px;
+      margin: 0 auto 40px auto;
+      box-shadow: 0 0 25px rgba(255, 204, 102, 0.3);
+      backdrop-filter: blur(5px);
+      transition: transform 0.3s ease;
+    }
+
+    form:hover {
+      transform: scale(1.02);
+      box-shadow: 0 0 35px rgba(255, 204, 102, 0.5);
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-bottom: 6px;
+      color: #ffe680;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    input[type="number"],
+    select,
+    textarea,
+    input[type="color"] {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #b18b46;
+      border-radius: 6px;
+      background-color: rgba(255, 255, 255, 0.1);
+      color: #fff8dc;
+      font-size: 15px;
+      margin-bottom: 15px;
+      transition: border 0.3s ease, background-color 0.3s ease;
+    }
+
+    input:focus,
+    select:focus,
+    textarea:focus {
+      outline: none;
+      border-color: #ffd966;
+      background-color: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 0 10px rgba(255, 204, 102, 0.3);
+    }
+
+    textarea {
+      resize: none;
+    }
+
+    input[type="radio"] {
+      margin-right: 6px;
+      accent-color: #ffd966;
+    }
+
+    input[type="submit"],
+    input[type="reset"] {
+      background-color: #b18b46;
+      color: #fff;
+      border: none;
+      border-radius: 25px;
+      padding: 12px 25px;
+      margin-right: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 15px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 204, 102, 0.2);
+    }
+
+    input[type="submit"]:hover {
+      background-color: #ffd966;
+      color: #3a2b0b;
+      transform: translateY(-3px);
+      box-shadow: 0 0 25px rgba(255, 204, 102, 0.5);
+    }
+
+    input[type="reset"]:hover {
+      background-color: #663300;
+      transform: translateY(-3px);
+    }
+
+    a {
+      display: block;
+      text-align: center;
+      text-decoration: none;
+      background-color: #b18b46;
+      color: white;
+      padding: 12px 25px;
+      border-radius: 30px;
+      width: fit-content;
+      margin: 0 auto;
+      font-weight: bold;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 15px rgba(255, 204, 102, 0.3);
+    }
+
+    a:hover {
+      background-color: #ffd966;
+      color: #3a2b0b;
+      transform: translateY(-4px);
+      box-shadow: 0 0 25px rgba(255, 204, 102, 0.5);
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ficha de Cadastro</h1>
+
+  <form action="#" method="post">
+    
+    <label>Nome completo:</label>
+    <input type="text" name="nome" required>
+
+    <label>E-mail:</label>
+    <input type="email" name="email" required>
+
+    <label>Telefone:</label>
+    <input type="tel" name="telefone" required>
+
+    <label>Idade:</label>
+    <input type="number" name="idade" min="18" max="80" required>
+
+    <label>Já participou de expedições arqueológicas?</label>
+    <select name="experiencia">
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label>Você possui algum tipo de deficiência?</label>
+    <select name="deficiencia">
+      <option value="">Selecione</option>
+      <option value="sim">Sim</option>
+      <option value="nao">Não</option>
+    </select>
+
+    <label>Por que deseja ser voluntário?</label>
+    <textarea name="motivo" rows="3" cols="30" required></textarea>
+
+    <label>Cor preferida para a camiseta:</label>
+    <input type="color" name="cor_camiseta">
+
+    <label>Você está disponível para viagens?</label>
+    <input type="radio" name="disponivel_viagem" value="sim" required> Sim
+    <input type="radio" name="disponivel_viagem" value="nao"> Não
+
+    <br><br>
+    <input type="submit" value="Enviar">
+    <input type="reset" value="Limpar">
+  </form>
+
+  <a href="exemplos.html">Voltar para a página inicial</a>
+
+</body>
+</html>
