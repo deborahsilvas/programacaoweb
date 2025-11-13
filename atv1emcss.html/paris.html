@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Paris</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f8f8f8;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                              url('https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            text-align: center;
+            padding: 80px 20px;
+        }
+
+        header h1 {
+            font-size: 3em;
+            letter-spacing: 3px;
+            margin-bottom: 10px;
+        }
+
+        header a {
+            background-color: #fff;
+            color: #333;
+            padding: 8px 15px;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        header a:hover {
+            background-color: #e0e0e0;
+        }
+
+        main {
+            max-width: 900px;
+            margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            border-left: 5px solid #0078d7;
+            padding-left: 10px;
+            color: #0078d7;
+        }
+
+        p {
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+        a {
+            color: #0078d7;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .imagens {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .imagens img {
+            width: 80%;
+            max-width: 600px;
+            margin: 15px 0;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+            transition: transform 0.3s;
+        }
+
+        .imagens img:hover {
+            transform: scale(1.03);
+        }
+
+        .voltar-topo {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .voltar-topo a {
+            display: inline-block;
+            background-color: #0078d7;
+            color: white;
+            padding: 10px 20px;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .voltar-topo a:hover {
+            background-color: #005fa3;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #333;
+            color: white;
+            padding: 15px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1 id="topo">Paris</h1>
+        <a href="index.html">Voltar ao Menu</a>
+    </header>
+
+    <main>
+        <h2>Sobre</h2>
+        <p>Paris é a capital da França e uma das cidades mais visitadas do mundo. Conhecida como a “Cidade Luz”, abriga monumentos icônicos como a Torre Eiffel, o Arco do Triunfo e a Catedral de Notre-Dame.</p>
+        <p>A cidade é famosa também por seus museus, sendo o Louvre um dos mais importantes do planeta. Além disso, Paris é reconhecida pela moda, gastronomia e charme de suas ruas.</p>
+        <p>Com uma atmosfera única, Paris atrai milhões de turistas todos os anos, tornando-se um dos principais destinos culturais e históricos da Europa.</p>
+
+        <p>Fonte: 
+            <a href="https://pt.wikipedia.org/wiki/Paris" target="_blank">Wikipedia</a>
+        </p>
+
+        <h3>Imagens</h3>
+        <div class="imagens">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/a/a8/Tour_Eiffel_Wikimedia_Commons.jpg" alt="Torre Eiffel">
+            <img src="https://res.cloudinary.com/hello-tickets/image/upload/c_limit,f_auto,q_auto,w_1300/v1646054617/o8w6xmq7qlmzdhcte12m.jpg" alt="Vista de Paris">
+        </div>
+
+        <div class="voltar-topo">
+            <a href="#topo">Voltar ao Topo</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - Página sobre Paris</p>
+    </footer>
+
+</body>
+</html>
