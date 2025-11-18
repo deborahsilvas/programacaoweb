@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Resumo – Flexbox e Grid CSS</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        section {
+            background: white;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+        }
+
+        .demo {
+            margin-top: 15px;
+            padding: 15px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+
+        .box {
+            padding: 10px;
+            background: #cce5ff;
+            border-radius: 5px;
+            margin: 5px;
+            border: 1px solid #99ccff;
+        }
+
+        .flex-demo {
+            display: flex;
+            gap: 10px;
+        }
+
+        .grid-demo {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Resumo – Flexbox e Grid CSS</h1>
+
+    <section>
+        <h2>Flexbox</h2>
+        <p>Sistema de layout unidimensional (linha ou coluna). Ideal para organizar e alinhar itens em sequência.</p>
+
+        <h3>Principais funcionalidades</h3>
+        <ul>
+            <li><b>display: flex</b> – ativa o Flexbox no container.</li>
+            <li><b>flex-direction</b> – define a direção (row/column).</li>
+            <li><b>flex-wrap</b> – permite quebrar a linha.</li>
+            <li><b>justify-content</b> – alinha itens no eixo principal.</li>
+            <li><b>align-items</b> – alinha no eixo cruzado.</li>
+            <li><b>align-content</b> – alinha grupos de linhas.</li>
+            <li><b>flex-grow</b> – define quanto cada item cresce.</li>
+            <li><b>flex-shrink</b> – define quanto encolhe.</li>
+            <li><b>flex-basis</b> – tamanho inicial do item.</li>
+            <li><b>flex</b> – shorthand (grow, shrink, basis).</li>
+            <li><b>order</b> – muda a ordem dos itens.</li>
+            <li><b>align-self</b> – alinhamento individual.</li>
+        </ul>
+
+        <h3>Vantagens</h3>
+        <ul>
+            <li>Simples para layout em linha/coluna.</li>
+            <li>Alinhamento fácil (inclusive centralização).</li>
+            <li>Excelente para componentes (menus, cards, listas).</li>
+            <li>Itens crescem/encolhem automaticamente.</li>
+            <li>Alteração de ordem sem mexer no HTML.</li>
+        </ul>
+
+        <h3>Exemplo prático (Flexbox)</h3>
+        <div class="demo flex-demo">
+            <div class="box">Item 1</div>
+            <div class="box">Item 2</div>
+            <div class="box">Item 3</div>
+        </div>
+    </section>
+
+    <section>
+        <h2>CSS Grid</h2>
+        <p>Sistema de layout bidimensional (linhas e colunas). Ideal para estruturar páginas completas.</p>
+
+        <h3>Principais funcionalidades</h3>
+        <ul>
+            <li><b>display: grid</b> – ativa o Grid.</li>
+            <li><b>grid-template-columns / rows</b> – define colunas e linhas.</li>
+            <li><b>grid-template-areas</b> – cria áreas nomeadas.</li>
+            <li><b>gap</b> – espaçamento entre células.</li>
+            <li><b>grid-auto-flow / auto-rows / auto-columns</b> – controla células automáticas.</li>
+            <li><b>grid-column / grid-row</b> – posiciona o item.</li>
+            <li><b>justify-content / align-content</b> – alinha o grid dentro do container.</li>
+            <li><b>justify-items / align-items</b> – alinha itens dentro das células.</li>
+            <li><b>justify-self / align-self</b> – alinhamento individual.</li>
+        </ul>
+
+        <h3>Vantagens</h3>
+        <ul>
+            <li>Controle total sobre linhas e colunas.</li>
+            <li>Cria layouts complexos e responsivos facilmente.</li>
+            <li>Áreas nomeadas tornam o layout mais legível.</li>
+            <li>Perfeito para estrutura geral da página.</li>
+            <li>Permite sobreposição de elementos.</li>
+        </ul>
+
+        <h3>Exemplo prático (Grid)</h3>
+        <div class="demo grid-demo">
+            <div class="box">A</div>
+            <div class="box">B</div>
+            <div class="box">C</div>
+            <div class="box">D</div>
+            <div class="box">E</div>
+            <div class="box">F</div>
+        </div>
+    </section>
+
+</body>
+</html>
